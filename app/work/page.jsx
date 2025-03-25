@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { BsArrowRight, BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 import {
   Tooltip,
   TooltipContent,
@@ -13,54 +13,67 @@ import {
 } from "@/components/ui/tooltip";
 import Link from "next/link";
 import Image from "next/image";
+import WorkSliderbtn from "@/components/workSliderbtn";
 
 const projects = [
   {
     num: "01",
     category: "frontend Project",
     title: "Project 1",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, quidem.",
+    description: "Ai application for computer vision and depth map technology.",
     Stack: [
       { name: "React" },
       { name: "node.js" },
       { name: "MongoDB" },
       { name: "Tailwind CSS" },
     ],
-    image: "/dummyimg.png",
+    image: "/Tech Inc..png",
     live: "",
     github: "",
   },
   {
     num: "02",
     category: "fullstack",
-    title: "Project 1",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, quidem.",
+    title: "Project 2",
+    description: "Web application for college",
     Stack: [{ name: "Next.js" }, { name: "MongoDB" }, { name: "chakra UI" }],
-    image: "/dummyimg.png",
+    image: "/1.png",
     live: "",
     github: "",
   },
   {
     num: "03",
     category: "Mern Stack",
-    title: "Project 1",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis, quidem.",
+    title: "Project 3",
+    description: "E-commerce with admin and user dashboard and login",
     Stack: [
       { name: "React" },
       { name: "node.js" },
       { name: "MongoDB" },
       { name: "Tailwind CSS" },
     ],
-    image: "/dummyimg.png",
+    image: "/WhatsApp Image 2025-03-25 at 11.30.03_07027430.jpg",
+    live: "",
+    github: "",
+  },
+  {
+    num: "04",
+    category: "Mern Stack",
+    title: "Project 4",
+    description: "Marketing dashboard",
+    Stack: [
+      { name: "React" },
+      { name: "node.js" },
+      { name: "MongoDB" },
+      { name: "Tailwind CSS" },
+    ],
+    image: "/ln2.png",
     live: "",
     github: "",
   },
 ];
 
-const Page = () => {
+export default function Page() {
   const [project, setProject] = useState(projects[0]);
 
   const handleSlideChange = (swiper) => {
@@ -144,7 +157,7 @@ const Page = () => {
               </div>
             </div>
           </div>
-          <div className="w-full  xl:w-[50%]">
+          <div className="w-full relative  xl:w-[50%]">
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
@@ -156,7 +169,7 @@ const Page = () => {
                   <SwiperSlide key={index} className="w-full ">
                     <div className="h-[468px]  relative group flex justify-center items-center bg-pink-50/20">
                       {/*overlay*/}
-                      <div></div>
+                      <div className="absolute top-0 bottom-0 w-full h-full  bg-black/10 z-10"></div>{" "}
                       {/*image*/}
                       <div className="relative w-full h-full">
                         <Image
@@ -170,12 +183,16 @@ const Page = () => {
                   </SwiperSlide>
                 );
               })}
+              <WorkSliderbtn
+                containerStyles="flex justify-center gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none "
+                btnStyles="bg-emerald-400 
+              hover:bg-emerald-hover rounded
+              text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all  "
+              />
             </Swiper>
           </div>
         </div>
       </div>
     </motion.section>
   );
-};
-
-export default Page;
+}

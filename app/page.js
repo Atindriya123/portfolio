@@ -60,15 +60,18 @@ export default function Home() {
               various programming languages and technologies
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-2">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2 
+              <Link href="/atin new cv (1).pdf">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="uppercase flex items-center gap-2 
                 rounded-full border-emerald-300 hover:bg-emerald-400"
-              >
-                <span>Download cv</span>
-                <MdOutlineFileDownload className="text-uppercase" />
-              </Button>
+                >
+                  <span>Download cv</span>
+                  <MdOutlineFileDownload className="text-uppercase" />
+                </Button>
+              </Link>
+
               <div className="mb-8 xl:mb-0">
                 <Socials
                   containerstyles="flex gap-8"

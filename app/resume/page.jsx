@@ -31,21 +31,21 @@ const about = {
 const experience = {
   title: "My Experience",
   description:
-    "I have over 12 years of experience in web development. I have worked with clients from various industries, including e-commerce, healthcare, and education. I have experience in front-end and back-end development, as well as design. I am proficient in HTML, CSS, JavaScript, React, Node.js, and Figma. I am also familiar with Tailwind CSS and Next.js.",
+    "I have over 9 years of experience in web development. I have worked with clients from various industries, including e-commerce, healthcare, and education. I have experience in front-end and back-end development, as well as design. I am proficient in HTML, CSS, JavaScript, React, Node.js, and Figma. I am also familiar with Tailwind CSS and Next.js.",
   items: [
     {
-      company: "Company 1",
+      company: "e-Ads media",
       position: "Senior Full Stack Developer",
-      duration: "2010 - 2015",
+      duration: "2016-2018",
     },
     {
-      company: "Company 2",
+      company: "Rudratech innovation",
       position: "Senior Full Stack Developer",
       duration: "2015 - 2020",
     },
     {
-      company: "Company 3",
-      position: "Frontend Developer",
+      company: "Freelancer",
+      position: "Fullstack Developer",
       duration: "2020 - Present",
     },
   ],
@@ -57,14 +57,15 @@ const education = {
     "I have a strong educational background in web development, focusing on both front-end and back-end technologies.",
   items: [
     {
-      institution: "Institution 1",
-      degree: "Bachelor's in Computer Science",
-      duration: "2006 - 2010",
+      institution:
+        "Guru Nananak institute of pharmaceutical science&technology",
+      degree: "Bachelor's in Hospital Management",
+      duration: "2011 - 2015",
     },
     {
-      institution: "Institution 2",
-      degree: "Master's in Software Engineering",
-      duration: "2010 - 2012",
+      institution: "Vidyustu",
+      degree: "fullstack web development",
+      duration: "1year",
     },
   ],
 };
@@ -167,17 +168,17 @@ export default function Page() {
           </TabsContent>
 
           {/* Skills Tab */}
-          <TabsContent value="skills" className="w-full">
-            <div className="flex flex-col gap-[30px] text-center xl:text-left">
+          <TabsContent value="skills" className="w-full h-full">
+            <div className="flex flex-col gap-[40px] text-center xl:text-left">
               <h3 className="text-4xl font-bold">{skills.title}</h3>
               <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                 {skills.description}
               </p>
-              <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-[10px]">
+              <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-[40px] xl:gap-[30px]">
                 {skills.skillList.map((skill, index) => (
                   <li
                     key={index}
-                    className="bg-[#232329] h-[100px] py-4 px-6 rounded-xl flex flex-col items-center justify-center"
+                    className="bg-[#232329] h-[80px] sm:w-[180px] py-4 px-4 sm:px-4 rounded-xl flex flex-col items-center justify-center"
                   >
                     <div className="text-2xl text-emerald-400">
                       {skill.icon}

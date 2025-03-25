@@ -33,7 +33,7 @@ const Photo = () => {
             priority
             quality={100}
             alt="Atin's Photo"
-            className="object-contain absolute mt-[50px] pr-9 "
+            className="object-contain absolute mt-[66px]  pr-8 "
           />
           <motion.svg
             className="w-[300px] xl:w-[506px] xl:h-[506px]"

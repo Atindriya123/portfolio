@@ -22,9 +22,9 @@ export default function MobileNav() {
   const pathname = usePathname();
 
   return (
-    <Sheet className="flex justify-center items-center ">
-      <SheetTrigger className="r">
-        <RiMenu3Fill className="text-[32px]  text-emerald-400" />
+    <Sheet className=" ">
+      <SheetTrigger className="flex justify-center items-center">
+        <RiMenu3Fill className="text-[32px] hover:text-emerald-400" />
       </SheetTrigger>
       <SheetContent className="flex flex-col">
         <SheetTitle className="text-white ">

@@ -23,7 +23,7 @@ export default function Header() {
           </div>
           <div className="hidden xl:flex items-center gap-8">
             <Nav />
-            <Link href={"/Contact"}>
+            <Link href={"/contact"}>
               <Button>Hire me</Button>
             </Link>
           </div>
